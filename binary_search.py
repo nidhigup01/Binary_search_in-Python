@@ -3,6 +3,7 @@
 Created on Tue May 22 07:03:10 2018
 
 @author: nidhi
+learned from : https://www.youtube.com/watch?v=zeULw-a7Mw8
 """
 list1 = [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 value = 6
@@ -23,7 +24,7 @@ def binary_search_iterative (list1, value):
         if len(list1) ==0 or (len(list1)==1 and list1[0]!= value):
             print ('value not in the list')
             return -1
-        elif list1[mid_index] == value:
+        elif list1[mid_index] == value or list1[0]==value:
             print ('value is in the list')
             return True
         
