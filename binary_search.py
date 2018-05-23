@@ -79,7 +79,29 @@ def binary_search_recursive(list1, value):
         binary_search_recursive(list1, value)
     
     return False
+
+
+def bsrec_ind(arr, value, low, high):
     
+    if len(arr) == 0 or (len(arr)==1 and arr[0]!= value) or low> high:
+        print ('value not in the list')
+        return False
+    else:
+        mid = (low + high)//2
+    if arr[mid] == value:
+        print ('index at which value found = ', mid)
+        return mid
+    elif value > arr[mid]:
+        low = mid+1
+        bsrec_ind(arr, value, low, high)
+    elif value < arr[mid]:
+        high = mid-1
+        bsrec_ind(arr, value, low, high)
+    return False
+    
+    
+
+bsrec_ind(list1, 31, 0, 6)    
         
         
     
