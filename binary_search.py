@@ -40,6 +40,27 @@ def binary_search_iterative (list1, value):
             l = len(list1)
                
     return False
+def binary_searchiterativeindex(list1, value):
+    low = 0
+    high = len(list1)-1
+    
+    while low <= high:
+        mid_index = (low + high)//2
+        if len(list1) ==0 or (len(list1)==1 and list1[0]!= value):
+            
+            return -1 
+        elif list1[mid_index] ==value:
+            print(mid_index)
+            return True
+        elif list1[mid_index] < value:
+            low = mid_index + 1
+            
+        elif list1[mid_index] > value:
+           
+            high = mid_index-1
+            
+    return -1
+
 
 def binary_search_recursive(list1, value):
     l= len(list1)
